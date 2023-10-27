@@ -10,6 +10,7 @@ app = fastapi.FastAPI()
 
 origins = [
     "http://localhost:8080",
+    "https://shm-frontend-c3f2dc0fa89c.herokuapp.com/"
 ]
 
 app.add_middleware(
