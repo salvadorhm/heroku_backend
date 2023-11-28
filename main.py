@@ -1,5 +1,6 @@
-import fastapi
+"""Module providing a function sqlite3 db connection"""
 import sqlite3
+import fastapi
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -10,7 +11,6 @@ app = fastapi.FastAPI()
 
 origins = [
     "http://localhost:8080",
-    "https://shm-frontend-c3f2dc0fa89c.herokuapp.com"
 ]
 
 app.add_middleware(
@@ -22,6 +22,7 @@ app.add_middleware(
 )
 
 class Contacto(BaseModel):
+    """Class representing a Contacto"""
     email : str
     nombre : str
     telefono : str
